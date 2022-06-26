@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+*{
+  font-family: 'Mulish', sans-serif;
+}
+@import "../assets/classes";
+body{
+  margin: 0;
+  background: $color-main-3;
+}
+*{
+  color: #fff;
+}
+.common-layout{
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  .el-container{
+    height: 100%;
+    &.fatherContainer{
+      height: calc(100% - 60px);
+    }
+  }
+}
+header.el-header{
+  background: $color-main-3;
+  border-bottom: 1px solid $color-main-1-darkened;
+  padding: 10px 15px;
+  .el-row{
+    height: 100%;
+  }
+  .logo{
+    font-size: 24px;
+    margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+.el-aside{
+  background: $color-main-3;
+  padding: 10px 0 10px 15px;
+  border-right: 1px solid $color-main-1-darkened;
+  position: relative;
+  .label{
+    display: block;
+    margin: 20px 0 0;
+    color: #ccc;
+  }
+  ul.coinsList{
+    display: block;
+    max-height: 60%;
+    overflow-y: auto;
+    padding: 0;
+    margin: 20px 0 0;
+    li{
+      display: block;
+      margin: 0;
+      width: 100%;
+      color: #777;
+      font-size: 16px;
+      transition: .2s linear;
+      padding: 14px 0;
+      &+li{
+        border-top: 1px solid #222;
+      }
+      &:hover{
+        color: #ccc;
+        cursor: pointer;
+      }
+      &.active{
+        color: $color-main-2;
+        font-weight: 800;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $color-main-3;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-main-1;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-main-1;
+    }
+  }
+  p.copyr{
+    display: table;
+    margin: 0;
+    position: absolute;
+    bottom: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    left: 15px;
+  }
+}
+.el-card{
+  background: $color-card;
+  border-color: transparent;
+  margin-bottom: 20px;
+  border-radius: $border-radius;
+}
+.el-main{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-main-3;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-main-1-darkened;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color-main-1;
+  }
+}
+
+.chardCard{
+  padding: 15px 10px;
+  h3{
+    display: table;
+    margin: 0 auto 15px;
+  }
+}
+
+h1{
+  display: table;
+  margin: 30px auto 40px;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}

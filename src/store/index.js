@@ -1,14 +1,10 @@
 import { createStore } from 'vuex'
 
+// Modules
+import coins from './modules/coins'
+
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+      coins
   }
 })
