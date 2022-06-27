@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <LineChart v-if="chartData.labels && chartData.values" :labels="chartData.labels"
+    <LineChart v-if="chartData.labels && chartData.values && show" :labels="chartData.labels"
                :values="chartData.values"></LineChart>
   </div>
 </template>
@@ -13,27 +13,36 @@ export default {
     LineChart
   },
   data: () => ({
-    loading: false,
+      show: true,
     chartData: {
       labels: [],
       values: [],
     },
   }),
   methods: {
-    createChartData() {
+    async createChartData() {
+        this.show = false;
       let array1 = [];
       let array2 = [];
-      this.coin_info.forEach(function (elem) {
+      await this.coin_info.forEach(function (elem) {
         array1.push(elem['date']);
         array2.push(elem['price_USD']);
       });
       this.chartData.labels = array1;
       this.chartData.values = array2;
+        this.show = true;
     }
   },
   created() {
     this.createChartData();
   },
+    watch: {
+        coin_info: {
+            handler() {
+                this.createChartData();
+            }
+        }
+    },
   computed: {
     coin_info() {
       return this.$store.getters.get_coin_info;

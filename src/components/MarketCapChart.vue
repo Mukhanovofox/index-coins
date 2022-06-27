@@ -1,12 +1,6 @@
 <template>
   <canvas id="MarketCapChart"></canvas>
 </template>
-<style>
-@import(
-
-'./assets/classes.scss'
-)
-</style>
 <script>
 import Chart from 'chart.js/auto';
 

@@ -226,3 +226,12 @@ h1{
     }
   }
 }
+
+.el-loading-mask {
+  background: rgba(32,13,54,.81);
+}
+
+.el-loading-spinner .path {
+  stroke: $color-main-1;
+  stroke-width: 4;
+}
