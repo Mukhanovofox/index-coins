@@ -1,4 +1,4 @@
-# index-coins
+# Oraclus-Index-Coins
 
 ## Project setup
 ```
