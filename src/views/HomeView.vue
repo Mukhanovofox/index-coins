@@ -10,7 +10,7 @@
                 <Aside/>
                 <el-main>
                     <el-row :gutter="20">
-                        <el-col :span="6">
+                        <el-col :xs="24" :sm="12" :md="12" :lg="6">
                             <el-card class="chardCard">
                                 <div class="content">
                                     <h3>Total Supply</h3>
@@ -18,7 +18,7 @@
                                 </div>
                             </el-card>
                         </el-col>
-                        <el-col :span="6">
+                        <el-col :xs="24" :sm="12" :md="12" :lg="6">
                             <el-card class="chardCard">
                                 <div class="content">
                                     <h3>Market Cap</h3>
@@ -26,7 +26,7 @@
                                 </div>
                             </el-card>
                         </el-col>
-                        <el-col :span="6">
+                        <el-col :xs="24" :sm="12" :md="12" :lg="6">
                             <el-card class="chardCard">
                                 <div class="content">
                                     <h3>Price</h3>
@@ -34,7 +34,7 @@
                                 </div>
                             </el-card>
                         </el-col>
-                        <el-col :span="6">
+                        <el-col :xs="24" :sm="12" :md="12" :lg="6">
                             <el-card class="chardCard">
                                 <div class="content">
                                     <h3>Circulating Supply</h3>

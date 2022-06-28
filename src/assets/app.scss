@@ -148,7 +148,7 @@ header.el-header{
   }
   h3{
     display: table;
-    margin: 0 0 15px 15px;
+    margin: 0 0 15px 10px;
   }
 }
 
@@ -309,5 +309,91 @@ h1{
   p{
     color: #67c23a!important;
     font-weight: 800;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 678px) {
+  .el-aside ul.coinsList li {
+    font-size: 14px;
+  }
+
+  .chardCard h3 {
+    font-size: 16px;
+  }
+
+  .el-card .el-card__header {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 678px) {
+  .el-aside {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: unset;
+  }
+
+  .common-layout .el-container.fatherContainer {
+    height: auto;
+    display: block;
+  }
+
+  .common-layout {
+    overflow: auto;
+    height: auto;
+  }
+
+  .el-main {
+    flex: unset;
+  }
+
+  .el-aside .label {
+    margin: 15px 15px 0;
+    font-size: 12px;
+  }
+
+  .el-range-editor.el-input__wrapper {
+    margin: 10px 15px 15px;
+  }
+
+  .el-aside ul.coinsList li {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .el-aside ul.coinsList {
+    max-height: 159px;
+  }
+
+  .el-aside p.copyr {
+    display: none;
+  }
+
+  .el-main {
+    padding: 15px;
+  }
+  .chardCard h3 {
+    font-size: 16px;
+  }
+
+  .el-card .el-card__header {
+    font-size: 16px;
+  }
+
+  .el-table .cell {
+    font-size: 12px;
+  }
+  .el-message {
+    width: 90%!important;
+    max-width: 90%!important;
+    margin: 0 auto;
+    min-width: 90%!important;
+    i{
+      font-size: 12px;
+    }
+    p{
+      font-size: 12px;
+    }
   }
 }
