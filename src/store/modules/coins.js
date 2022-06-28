@@ -18,7 +18,7 @@ const state = {
 
 const actions = {
     [GET_COIN_INFO]: async (store) => {
-        // const {data} = await axios({url: 'pairs', method: 'GET'});
+        // const {data} = await axios({url: 'api/coins_supply/?coin_id=1&start_date=2022-06-01&end_date=2022-06-10', method: 'GET'});
         let data = [{
             "id": 1021338,
             "date": "2022-06-01",
