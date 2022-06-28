@@ -120,13 +120,12 @@ const actions = {
             "total_supply": 19064018.0,
             "circulating_supply": 19064018.0
         }];
-        store.commit(UPDATE_COIN_INFO, data);
-        store.commit(COIN_LOADING_TOGGLE, false);
-        console.log(store.state.coin_form);
+        await store.commit(UPDATE_COIN_INFO, data);
+        await store.commit(COIN_LOADING_TOGGLE, false);
         // return data;
     },
     [SELECT_COIN_OR_DATE_RANGE]: async (store, value) => {
-        store.commit(UPDATE_COIN_FORM, value);
+        await store.commit(UPDATE_COIN_FORM, value);
         store.commit(COIN_LOADING_TOGGLE, true);
         store.dispatch(GET_COIN_INFO);
     },

@@ -89,6 +89,15 @@
         created() {
             // this.getCoinInfo();
         },
+        watch:{
+            coin_loading:{
+                handler(newVal){
+                    if(newVal === false){
+                        this.$message.success('Data Updated');
+                    }
+                }
+            }
+        },
         computed: {
             coin_loading() {
                 return this.$store.getters.get_coin_loading;

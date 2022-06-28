@@ -1,5 +1,18 @@
 <template>
     <el-aside width="240px">
+        <p class="label">Select Date:</p>
+        <el-date-picker
+                v-model="date_range"
+                type="daterange"
+                format="YYYY-MM-DD"
+                value-format="YYYY-MM-DD"
+                range-separator="-"
+                start-placeholder="Start date"
+                end-placeholder="End date"
+                :size="size"
+                :editable="false"
+                @change="getCoinInfo"
+        />
         <p class="label">Select Coin:</p>
         <ul class="coinsList">
             <li v-bind:key="item.id" v-for="item in list" :class="item.id === coin_form.coin_id?'active':''"
@@ -7,17 +20,6 @@
                 ({{ item.name }})
             </li>
         </ul>
-        <el-date-picker
-                v-model="date_range"
-                type="daterange"
-                format="YYYY-MM-DD"
-                value-format="YYYY-MM-DD"
-                range-separator="To"
-                start-placeholder="Start date"
-                end-placeholder="End date"
-                :size="size"
-                @change="getCoinInfo"
-        />
         <p class="copyr">Version 1.0<br>Oraclus 2022</p>
     </el-aside>
 </template>

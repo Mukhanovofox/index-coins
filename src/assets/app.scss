@@ -67,7 +67,7 @@ header.el-header{
         padding-left: 25px;
       }
       &.active{
-        color: $color-main-2;
+        color: $color-main-1;
         font-weight: 800;
         background: $color-card-3;
         border-left: 10px solid $color-main-1-darkened;
@@ -94,7 +94,7 @@ header.el-header{
     bottom: 25px;
     font-size: 14px;
     line-height: 1.6;
-    color: #ccc;
+    color: #999;
     left: 15px;
   }
 }
@@ -234,4 +234,80 @@ h1{
 .el-loading-spinner .path {
   stroke: $color-main-1;
   stroke-width: 4;
+}
+.el-range-editor.el-input__wrapper {
+  white-space: normal;
+  background: transparent;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  text-align: center;
+  width: auto;
+  color: #fff;
+  margin: 15px 15px 25px;
+  box-shadow: 0 0 0 1px $color-main-1-darkened;
+}
+
+.el-range-editor.el-input__wrapper i {
+  display: none;
+}
+
+.el-range-editor.el-input__wrapper input {
+  color: $color-main-2;
+  font-weight: 700;
+}
+
+.el-range-editor.el-input__wrapper span {
+  color: $color-main-1-darkened;
+}
+
+.el-date-range-picker {
+  background: $gradient-1;
+}
+
+.el-popper.is-light {
+  background: transparent;
+  border: 1px solid $border-color;
+}
+
+.el-date-range-picker__content.is-left {border-right: 1px solid $border-color;}
+
+.el-date-table th {
+  border-bottom: 1px solid $border-color;
+  color: $color-main-1;
+}
+
+.el-date-range-picker__header div {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.el-date-table td.end-date .el-date-table-cell__text, .el-date-table td.start-date .el-date-table-cell__text {
+  background: $color-main-2;
+}
+
+.el-date-table td.in-range .el-date-table-cell {
+  background: $color-main-1-darkened;
+  &:hover{
+    background: $color-main-1-darkened;
+  }
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+  color: $datepicker-1;
+}
+
+.el-message--success {
+  i{
+    color: #67c23a!important;
+    *{
+
+      color: #67c23a!important;
+    }
+  }
+  p{
+    color: #67c23a!important;
+    font-weight: 800;
+  }
 }
