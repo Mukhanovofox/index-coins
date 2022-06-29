@@ -4,6 +4,6 @@ module.exports = defineConfig({
 })
 // module.exports = {
 //     devServer: {
-//         proxy: 'https://api.hodlkit.io',
+//         proxy: 'http://172.31.17.161:8000',
 //     }
 // }
