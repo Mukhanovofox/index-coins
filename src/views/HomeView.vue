@@ -52,6 +52,16 @@
                                 <CoinInfoTable v-loading="coin_loading"/>
                             </el-card>
                         </el-col>
+                        <el-col :span="24">
+                            <el-card>
+                                <template #header>
+                                    <div class="card-header">
+                                        <span>All Params</span>
+                                    </div>
+                                </template>
+                                <AllParamsBlock v-loading="coin_loading"/>
+                            </el-card>
+                        </el-col>
                     </el-row>
                 </el-main>
             </el-container>
@@ -66,6 +76,7 @@
     import PriceBlock from "@/views/home-components/PriceBlock";
     import CirculatingSupplyBlock from "@/views/home-components/CirculatingSupplyBlock";
     import CoinInfoTable from "@/views/home-components/CoinInfoTable";
+    import AllParamsBlock from "@/views/home-components/AllParamsBlock";
     // import {GET_COIN_INFO} from "@/store/modules/coins";
 
     export default {
@@ -75,7 +86,8 @@
             MarketCapBlock,
             PriceBlock,
             CirculatingSupplyBlock,
-            CoinInfoTable
+            CoinInfoTable,
+            AllParamsBlock
         },
         methods: {
             // async getCoinInfo() {
