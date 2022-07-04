@@ -8,8 +8,9 @@
             </el-header>
             <el-container class="fatherContainer">
                 <Aside/>
-                <el-main>
-                    <el-row :gutter="20">
+                <el-main v-loading="coin_loading">
+                    <el-empty description="Empty" v-if="coin_info.length <= 0"></el-empty>
+                    <el-row :gutter="20" v-if="coin_info.length > 0">
                         <el-col :xs="24" :sm="12" :md="12" :lg="6">
                             <el-card class="chardCard">
                                 <div class="content">
@@ -56,7 +57,7 @@
                             <el-card>
                                 <template #header>
                                     <div class="card-header">
-                                        <span>All Params</span>
+                                        <span>All Params (Click to hide or show)</span>
                                     </div>
                                 </template>
                                 <AllParamsBlock v-loading="coin_loading"/>
@@ -113,6 +114,9 @@
         computed: {
             coin_loading() {
                 return this.$store.getters.get_coin_loading;
+            },
+            coin_info() {
+                return this.$store.getters.get_coin_info;
             },
         }
     }
