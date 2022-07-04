@@ -330,6 +330,10 @@ p.clear{
   font-size: 14px;
   text-align: center;
 }
+.el-empty {
+  height: 100%;
+}
+
 @media (max-width: 1600px) and (min-width: 678px) {
   .el-aside ul.coinsList li {
     font-size: 14px;
